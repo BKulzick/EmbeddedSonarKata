@@ -16,7 +16,8 @@ def distanceMeasurement(TRIG,ECHO):
         pulseEnd = time.time()
 
     pulseDuration = pulseEnd - pulseStart
-    distance = pulseDuration * 17150
+    SPEED_OF_SOUND_CM = 17150
+    distance = pulseDuration * SPEED_OF_SOUND_CM
     distance = round(distance, 2)
     return distance
 
