@@ -1,10 +1,12 @@
 import unittest
-from mock import Mock, patch
+from unittest.mock import patch
 from Sonar import distanceMeasurement
 
 class TestStringMethods(unittest.TestCase):
 
     @mock.patch('Adafruit_BBIO.input')
+    @mock.patch('Adafruit_BBIO.output')
+    @mock.patch('Adafruit_BBIO.setup')
     def test_distanceMeasurement(self):
         ECHO_PIN = "P8_11"
         TRIGGER_PIN = "P8_12"
